@@ -1,3 +1,12 @@
+# -*- coding: utf-8 -*-
+"""
+@author: Mengxuan Chen
+@description:
+    删除排序数组中的重复项
+    https://leetcode-cn.com/leetbook/read/top-interview-questions-easy/x2gy9m/
+@revise log:
+    2021.01.05 创建程序
+"""
 class Solution(object):
     def removeDuplicates(self, nums):
         """

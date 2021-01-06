@@ -1,3 +1,12 @@
+# -*- coding: utf-8 -*-
+"""
+@author: Mengxuan Chen
+@description:
+    找到较大分组的位置
+    https://leetcode-cn.com/problems/positions-of-large-groups/
+@revise log:
+    2021.01.05 创建程序
+"""
 class Solution(object):
     def largeGroupPositions(self, s):
         ans = []

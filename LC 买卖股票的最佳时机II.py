@@ -1,3 +1,12 @@
+# -*- coding: utf-8 -*-
+"""
+@author: Mengxuan Chen
+@description:
+    买卖股票的最佳时机
+    https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/
+@revise log:
+    2021.01.06 创建程序
+"""
 class Solution(object):
     def maxProfit(self, prices):
         """
