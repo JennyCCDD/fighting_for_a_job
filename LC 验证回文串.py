@@ -2,11 +2,10 @@
 """
 @author: Mengxuan Chen
 @description:
-    有效的字母异位词
+    验证回文串
 @revise log:
     2021.01.13 创建程序
 """
-import re
 class Solution(object):
     def isPalindrome(self, s):
         """
