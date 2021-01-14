@@ -7,15 +7,19 @@
     2021.01.14 创建程序
 """
 
-
 class Solution(object):
-    def countAndSay(self, n):
+    def longestCommonPrefix(self, strs):
         """
-        :type n: int
+        :type strs: List[str]
         :rtype: str
         """
+        num = len(strs)
+        common = ""
+
+
+        return common
 
 
 solution = Solution()
-result = solution.countAndSay(n=4)
+result = solution.longestCommonPrefix(["flower","flow","flight"])
 print(result)
