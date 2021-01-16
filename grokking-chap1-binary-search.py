@@ -1,3 +1,4 @@
+#
 class BinarySearch():
     def search_iterative(self, list, item):
         # low and high keep track of which part of the list you'll search in.

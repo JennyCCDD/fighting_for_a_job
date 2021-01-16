@@ -11,7 +11,9 @@
 
 @revise log:
     2021.01.15 创建程序
-                解题思路：
+    2021.01.16 解题思路：链表的元素是分开的。其中每个元素都存储了下一个元素的地址。
+                该题是基于leedcode在线运行，不需要自己定义链表
+
 # """
 # Definition for singly-linked list.
 # class ListNode(object):
@@ -19,23 +21,16 @@
 #         self.val = x
 #         self.next = None
 
-
-class Solution:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-
-    def deleteNode(self):
+class Solution(object):
+    def deleteNode(self, node):
         """
         :type node: ListNode
         :rtype: void Do not return anything, modify node in-place instead.
         """
-        self.val = self.next.val
-        self.next = self.next.next
+        node.val = node.next.val
+        node.next = node.next.next
 
 
-
-# head = [4,5,1,9], node = 5
-solution = Solution([4,5,1,9])
+solution = Solution(object = [4,5,1,9])
 result = solution.deleteNode(node = 5)
 print(result)
