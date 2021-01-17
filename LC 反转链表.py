@@ -7,7 +7,7 @@
 
 @revise log:
     2021.01.16 创建程序
-               解题思路：
+    2021.01.17 解题思路：
 # """
 
 # Definition for singly-linked list.
@@ -16,4 +16,18 @@
 #         self.val = val
 #         self.next = next
 
+class Solution(object):
+    def reverseList(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        prev = None
+        curr = head
+        while (curr != None):
+            Next = curr.next
+            curr.next = prev
+            prev = curr
+            curr = Next
 
+        return prev
