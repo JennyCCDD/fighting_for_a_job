@@ -1,0 +1,22 @@
+# -*- coding: utf-8 -*-
+"""
+@author: Mengxuan Chen
+@description:
+    二叉树的最大深度
+@revise log:
+    2021.01.22 创建程序
+"""
+
+
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def maxDepth(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
