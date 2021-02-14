@@ -13,15 +13,28 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
-        minprice = 10**5
-        maxprofit = 0
-        for i in range(0,len(prices)):
-            if prices[i] < minprice:
-                minprice = prices[i]
-            elif (prices[i] - minprice > maxprofit):
-                maxprofit = prices[i] - minprice
+        # 动态规划
+        n = len(prices)
+        if n == 0: return 0  # 边界条件
+        dp = [0] * n
+        minprice = prices[0]
 
-        return maxprofit
+        for i in range(1, n):
+            minprice = min(minprice, prices[i])
+            dp[i] = max(dp[i - 1], prices[i] - minprice)
+
+        return dp[-1]
+
+        # 我的写法
+        # minprice = 10**5
+        # maxprofit = 0
+        # for i in range(0,len(prices)):
+        #     if prices[i] < minprice:
+        #         minprice = prices[i]
+        #     elif (prices[i] - minprice > maxprofit):
+        #         maxprofit = prices[i] - minprice
+        #
+        # return maxprofit
 
 
 
