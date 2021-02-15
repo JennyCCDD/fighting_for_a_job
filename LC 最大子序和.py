@@ -2,7 +2,7 @@
 """
 @author: Mengxuan Chen
 @description:
-    买卖股票的最佳时机
+    最大子序和
 @revise log:
     2021.02.15 创建程序
                 解题思路：
