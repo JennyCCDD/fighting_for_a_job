@@ -19,6 +19,14 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        n = len(nums)
+        pre = 0
+        maxnums = nums[0]
+        for i in nums:
+            pre = max(pre + i, i)
+            maxnums = max(maxnums, pre)
+        return maxnums
+
         # n = len(nums)
         # if isinstance(n / 2,int):
         #     if int(n/2) ==1:
