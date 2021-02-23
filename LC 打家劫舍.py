@@ -19,13 +19,28 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        n = len(nums)
-        pre = 0
-        maxnums = nums[0]
-        for i in nums:
-            pre = max(pre + i, i)
-            maxnums = max(maxnums, pre)
-        return maxnums
+        if not nums:
+            return 0
+
+        size = len(nums)
+        if size == 1:
+            return nums[0]
+
+        dp = [0] * size
+        dp[0] = nums[0]
+        dp[1] = max(nums[0], nums[1])
+        for i in range(2, size):
+            dp[i] = max(dp[i - 2] + nums[i], dp[i - 1])
+
+        return dp[size - 1]
+
+        # n = len(nums)
+        # pre = 0
+        # maxnums = nums[0]
+        # for i in nums:
+        #     pre = max(pre + i, i)
+        #     maxnums = max(maxnums, pre)
+        # return maxnums
 
         # n = len(nums)
         # if isinstance(n / 2,int):
@@ -39,7 +54,7 @@ class Solution(object):
         #     else:
         #         rob= sum(nums[::2])
         # return rob
-        return max(sum(nums[::2]),sum(nums[1::2]),sum(nums[::3]))
+        # return max(sum(nums[::2]),sum(nums[1::2]),sum(nums[::3]))
 
 solution = Solution()
 result = solution.rob([1,2,3,1])
